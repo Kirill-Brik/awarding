@@ -1,0 +1,65 @@
+{
+  "kind": "collectionType",
+  "collectionName": "unions",
+  "info": {
+    "singularName": "union",
+    "pluralName": "unions",
+    "displayName": "Union",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "initiator": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "private": true
+    },
+    "union_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "private": true
+    },
+    "guest_data": {
+      "displayName": "guest_union",
+      "type": "component",
+      "repeatable": false,
+      "component": "union-data.guest-union",
+      "required": false
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "disable",
+        "confirm",
+        "not_confirm"
+      ],
+      "private": true,
+      "required": true,
+      "default": "disable"
+    },
+    "union_type": {
+      "type": "enumeration",
+      "enum": [
+        "marriage",
+        "friend",
+        "colleague"
+      ],
+      "required": false
+    },
+    "transaction_hash": {
+      "type": "text",
+      "private": true
+    },
+    "contract": {
+      "type": "text"
+    },
+    "confirm_date": {
+      "type": "datetime"
+    }
+  }
+}

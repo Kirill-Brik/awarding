@@ -1,0 +1,9 @@
+$colors: (
+        "primary": (
+                "base": rgba(10, 41, 115, 1),
+        ),
+);
+
+@forward "element-plus/theme-chalk/src/common/var" with ($colors: $colors);
+
+@forward "utils";

@@ -1,0 +1,25 @@
+// assets/styles/main.scss
+
+
+$gray-blue: rgba(10, 41, 115, 0.5);
+$red: rgba(241, 0, 0, 1);
+$green: rgba(0, 114, 11, 1);
+$blue: rgba(10, 41, 115, 1);
+$light-blue: rgba(0, 159, 223, 1);
+
+body {
+  font-family: 'Raleway', 'Avenir', Helvetica, Arial, sans-serif;
+  background-color: #ffffff;
+  color: rgba(10, 41, 115, 0.5);
+  margin: 0;
+  padding: 0;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .el-loading-mask.is-fullscreen {
+    z-index: 99999 !important;
+  }
+}
+
